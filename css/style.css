@@ -1,0 +1,300 @@
+:root {
+	--main-color:#40E0D0;
+	--main-color-hover:#18FFFF;
+	--secondary-color:#00838F;
+	--secondary-color-hover:#006064;
+}
+
+/** anchors **/
+a{
+	text-decoration:none;
+}
+
+/** buttons **/
+.secondary-btn{
+	border-bottom-left-radius: 25rem;
+	border-top-right-radius: 25rem;
+	color: white !important;
+	background-color: var(--secondary-color) !important;
+	padding: 0 1rem;
+}
+.secondary-btn:hover{
+	background-color: var(--secondary-color-hover) !important;
+}
+.main-btn{
+	border-top-left-radius: 25rem;
+	border-bottom-right-radius: 25rem;
+	color: white !important;
+	background-color: var(--main-color) !important;
+	padding: 0 1rem;
+}
+.main-btn:hover{
+	background-color: var(--main-color-hover) !important;
+}
+
+/* custom text */
+.custom-text-primary{
+	color:var(--main-color);
+	font-family: 'Orbitron', sans-serif;
+}
+.custom-text-primary-hover{
+	color:var(--main-color-hover);
+	font-family: 'Orbitron', sans-serif;
+}
+
+.custom-text-secondary{
+	color:var(--secondary-color);
+	font-family: 'Orbitron', sans-serif;
+}
+.custom-text-secondary-hover{
+	color:var(--secondary-color-hover);
+	font-family: 'Orbitron', sans-serif;
+}
+/* end custom text */
+
+/*** custom background ***/
+.bg-main{
+	background-color: var(--main-color);
+}
+.bg-second{
+	background-color: var(--secondary-color);
+}
+.bg-main-outline{
+	background-color: white;
+	border: 2px solid var(--main-color);
+	color: var(--main-color);
+}
+.bg-second-outline{
+	background-color: white;
+	border: 2px solid var(--secondary-color);
+	color: var(--secondary-color);
+}
+
+/*** end custom background ***/
+
+/*** custom colors ***/
+.currency{
+	color:#43a047;
+}
+.main-color{
+	color: var(--main-color);
+}
+.second-color{
+	color: var(--secondary-color);
+}
+/*** end custom colors ***/
+
+/** navbars **/
+#top-nav {
+	background-color:var(--main-color);
+
+}
+#top-nav a{
+	color:var(--secondary-color);
+}
+#top-nav a:hover{
+	color:var(--secondary-color-hover);
+}
+#top-nav .dropdown-menu{
+	z-index: 1021;//z-index of sticky top in bootstrap is 1020
+}
+
+
+.navbar-toggler{
+	color: var(--main-color);
+	background-color: white;
+}
+
+
+/** header **/
+header {
+	background: white;
+}
+header img{
+	width:100%;
+}
+
+header .middle-header  a{
+	color:var(--main-color);
+}
+header .middle-header a:hover{
+	color:var(--main-color-hover);
+}
+.search{
+	color:var(--main-color);
+	border-color: #ced4da;
+}
+.search:hover{
+	background-color:var(--main-color-hover);
+	color:white;
+}
+.cart-dropdown {
+  position: absolute;
+  width: 350px;
+  background: #FFF;
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 0px 2px #E4E7ED;
+  box-shadow: 0px 0px 0px 2px #E4E7ED;
+  z-index: 99;
+  right: 0;
+}
+
+.cart-dropdown .cart-list {
+  max-height: 180px;
+  overflow-y: auto;
+	overflow-x: hidden;
+  margin-bottom: 15px;
+	clear: both;
+}
+
+header .badge{
+	font-size: .6rem;
+	background-color:var(--main-color);
+	padding: 0 5px;
+  vertical-align: top;
+  margin-left: -5px;
+}
+header .middle-header a:hover .badge{
+	background-color:var(--main-color-hover);
+}
+
+header nav{
+	background-color:var(--main-color);
+}
+header nav a{
+		color:var(--secondary-color);
+	  border-bottom-left-radius: 25rem;
+		border-top-right-radius: 25rem;
+}
+header nav a:hover{
+	background-color:var(--secondary-color-hover);
+	color:var(--main-color-hover);
+
+}
+header nav a.active{
+	background-color:var(--secondary-color);
+	color:var(--main-color);
+}
+
+/***** banner (carsouel) *****/
+
+.carousel-indicators [data-bs-target]{
+	width: 8vw;
+}
+.carousel-indicators img {
+	height: 4vw;
+}
+.carousel-item img{
+	height: 40vw;
+	background-position: center;
+	background-size: cover;
+}
+
+.overlay {
+	position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+.custom-caption{
+	margin-bottom: 15vw;
+	font-family: 'Satisfy', cursive;
+	color:white;
+}
+.carousel-control-next , .carousel-control-prev{
+	color: var(--main-color);
+	font-size: 24px;
+}
+.carousel-control-next:hover , .carousel-control-prev:hover,.carousel-control-next:focus, .carousel-control-prev:focus{
+	color: var(--main-color-hover);
+}
+/***** end banner (carsouel) *****/
+
+/*** some products (products of main page) ***/
+.special-products-container{
+	margin: 100px 0px;
+}
+.card:hover{
+	border-color: var(--main-color);
+}
+.product-image-container{
+	height: 150px;
+}
+.product-image-container img{
+	height: 120px;
+	transition: transform .5s ease;
+}
+.card:hover .product-image-container img {
+  transform: scale(1.2);
+}
+a.second-color:hover{
+	color: var(--secondary-color-hover);
+}
+
+	/** cutomise slick **/
+	.slick-slider {
+	    margin:0 -15px;
+	}
+	.slick-slide {
+	    padding:10px;
+	    text-align:center;
+	    margin-right:15px;
+	    margin-left:15px;
+	}
+	.slick-prev{
+		left: -3px;
+		z-index: 100;
+	}
+	.slick-next{
+		right: -3px;
+		z-index: 100;
+	}
+	.slick-prev:before {
+		  content: "\f137";
+			font-family: "Font Awesome 5 Free";
+		  color: var(--main-color);
+			font-weight: 900;
+		}
+		.slick-next:before {
+			content: "\f138";
+			font-family: "Font Awesome 5 Free";
+		  color: var(--main-color);
+			font-weight: 900;
+		}
+/*** end some products (products of main page) ***/
+
+/*** footer ***/
+.footer{
+	background-color: var(--secondary-color);
+	border-top: 10px solid  var(--secondary-color-hover);
+	border-bottom: 5px solid  var(--main-color);
+}
+.social{
+	color:var(--main-color);
+	font-size: 20px;
+	padding: 5px 5px;
+}
+*:hover > .social{
+	color:var(--main-color-hover);
+	font-size: 25px;
+}
+/*** end footer ***/
+
+/** Developer section **/
+.developer-header{
+	font-family: 'Satisfy', cursive;
+	color:var(--secondary-color);
+}
+.developer-social{
+	color:var(--secondary-color);
+	font-size: 25px;
+	padding: 5px 5px;
+}
+*:hover > .developer-social{
+	color:var(--main-color-hover);
+	font-size: 35px;
+}
+/** end Developer section **/
