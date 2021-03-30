@@ -234,8 +234,8 @@ a.second-color:hover{
 	color: var(--secondary-color-hover);
 }
 .brand-image{
-	height: 5vw;
-	width: 10vw;
+	height: 25%;
+	width: 50%;
 }
 	/** cutomise slick **/
 	.slick-slider {
