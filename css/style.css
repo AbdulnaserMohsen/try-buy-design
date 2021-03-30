@@ -233,7 +233,9 @@ header nav a.active{
 a.second-color:hover{
 	color: var(--secondary-color-hover);
 }
-
+.brand-image{
+	height: 25px;
+}
 	/** cutomise slick **/
 	.slick-slider {
 	    margin:0 -15px;
