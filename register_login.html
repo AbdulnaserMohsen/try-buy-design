@@ -13,6 +13,9 @@
 		<link rel="stylesheet" href="css/slick.css"/>
 		<link rel="stylesheet" href="css/slick-theme.css"/>
 		<link rel="stylesheet" href="css/style.css">
+
+		<!-- <msdropdown> -->
+		<link rel="stylesheet" type="text/css" href="css/dd.css" />
 	</head>
 
 	<body>
@@ -220,55 +223,84 @@
 
       <form class="needs-validation my-5" novalidate id="register-form" action="" method="post">
 
-				<div class="form-group">
-					<label class="form-control-label" for="arabicName">Your Name in Arabic</label>
-					<input class="form-control" type="text" name="name_ar" placeholder="أحمد" pattern="^[\u0621-\u064A ]+$" title="Your name must be in Arabic character only" value="" autocomplete="on" id="arabicName" autofocus required >
-					<div class="invalid-feedback">
-						Your name must be in Arabic character only
+				<div class="row align-items-center mb-4">
+				  <div class="col-md-2">
+				    <label for="arabic-name" class="col-form-label">Name in Arabic <i class="far fa-address-book"></i></label>
+				  </div>
+				  <div class="col">
+				    <input id="arabic-name" class="form-control is-invalid shadow-none border-top-0 border-start-0 border-end-0 border-5"
+						type="text" name="name_ar" placeholder="أحمد" pattern="^[\u0621-\u064A ]+$" title="Your name must be in Arabic character only"
+						autocomplete="on" autofocus required value="">
+						<div class="invalid-feedback">
+							Your name must be in Arabic character only
+						</div>
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label class="form-control-label" for="englishName">Your Name in English</label>
-					<input class="form-control is-invalid" type="text" name="name_en" placeholder="ahmed" pattern="^[a-zA-Z ]+$" title="Your name must be in English character only" value="" autocomplete="on" id="englishName" required >
-					<div class="invalid-feedback">
-						Your name must be in English character only
+				<div class="row align-items-center mb-4">
+					<div class="col-md-2">
+						<label for="english-name" class="col-form-label">Name in English <i class="far fa-address-book"></i></label>
+					</div>
+					<div class="col">
+						<input id="english-name" class="form-control is-valid shadow-none border-top-0 border-start-0 border-end-0 border-5"
+						type="text" name="name_en" placeholder="Ahmed" pattern="^[a-zA-Z ]+$" title="Your name must be in English character only"
+						autocomplete="on" required value="">
+						<div class="invalid-feedback">
+							Your name must be in English character only
+						</div>
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label class="form-control-label" for="email">Your Email</label>
-					<input class="form-control is-valid" id="email" type="text" name="email" placeholder="name@domain-name.com" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" title="Your email must be like that name@domain-name.com" value="" autocomplete="on" required>
-					<div class="invalid-feedback">
-            $error_message['email']
+				<div class="row align-items-center mb-4">
+					<div class="col-md-2">
+						<label for="user-email" class="col-form-label">Email <i class="far fa-envelope"></i></label>
+					</div>
+					<div class="col">
+						<input id="user-email" class="form-control shadow-none border-top-0 border-start-0 border-end-0 border-5"
+						type="email" name="email" placeholder="name@domain-name.com" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+						title="Your email must be like that name@domain-name.com" autocomplete="on" required value="">
+						<div class="invalid-feedback">
+							Your email must be like that name@domain-name.com
+						</div>
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label class="form-control-label" for="phone">Your Phone</label>
-					<input class="form-control" id="phone" type="text" name="phone" placeholder="+201..." pattern="^\+?\d{10,}$" title="Your phone must be at least 10 digits" value="" autocomplete="on" required >
-					<div class="invalid-feedback">
-						Your phone must be at least 10 digits
+				<div class="row align-items-center mb-4">
+					<div class="col-md-2">
+						<label for="user-phone" class="col-form-label ">Mobile Phone <i class="fas fa-mobile-alt"></i></label>
+					</div>
+					<div class="col">
+						<input id="user-phone" class="is-invalid form-control shadow-none border-top-0 border-start-0 border-end-0 border-5"
+						type="text" name="phone" placeholder="+201..." pattern="^\+?\d{10,}$"
+						title="Your phone must be at least 10 digits" autocomplete="on" required value="">
+						<div class="invalid-feedback">
+							Your phone must be at least 10 digits
+						</div>
 					</div>
 				</div>
-				<div class="form-group ">
-					<div class="card-columns">
+
+
+				<div class="form-group my-3 ">
+					<div class="row row-cols-4 justify-content-around">
+
 						<div class="d-inline-block">
-							<label class="form-control-label">Your Country</label>
-							<select name="country" class="custom-select countryId is-invalid" id="countryId" required>
+							<label for="user-country" class="form-label">Country <i class="fas fa-globe"></i></label>
+							<select name="country" class="form-select shadow-none border-top-0 border-start-0 border-end-0 border-5 countryId is-invalid "
+							id="user-country" required>
 								<option value="">Select Country</option>
-								<option value="1">Egypt</option>
+								<option value="1"><img src="images/brands/1200px-Ray-Ban_logo.svg.png"/> Egypt</option>
 							</select>
 							<div class="invalid-feedback">
 								Choose your country
 							</div>
 						</div>
 
-						<div class="d-inline-block">
-							<label class="form-control-label">Your State</label>
-							<select name="state" class="custom-select stateId is-valid" id="stateId" required>
-								<option value="">Select State</option>
-								<option value="1">Egypt</option>
+							<div class="d-inline-block">
+								<label for="user-state" class="form-label">State <i class="far fa-flag"></i></label>
+								<select name="state" class="form-select shadow-none border-top-0 border-start-0 border-end-0 border-5 stateId is-valid"
+								id="user-state" required>
+									<option value="">Select State</option>
+								<option value="1">Cairo</option>
 							</select>
 							<div class="invalid-feedback">
 								Choose your state
@@ -276,10 +308,10 @@
 						</div>
 
 						<div class="d-inline-block">
-							<label class="form-control-label">Your City</label>
-							<select name="city" class="custom-select cityId" id="cityId" required>
+							<label for="user-city" class="form-label">City <i class="fas fa-map-marked-alt"></i></label>
+							<select name="city" class="form-select shadow-none border-top-0 border-start-0 border-end-0 border-5 cityId" id="user-city" required>
 								<option value="">Select City</option>
-								<option value="1">Egypt</option>
+								<option value="1">6th october</option>
 							</select>
 							<div class="invalid-feedback">
 								Choose your city
@@ -289,55 +321,76 @@
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label class="form-control-label" for="address">Your Address</label>
-					<input class="form-control " id="address" type="text" name="address" placeholder="Street..." pattern="^([\u0621-\u064A0-9\-, ]{3,})|([a-zA-Z0-9\-, ]{3,})+$" title="Your address must be in English or Arabic characters only and at least 3 characters" value="" autocomplete="on" required>
-					<div class="invalid-feedback">
-						Your address must be in English or Arabic characters only and at least 3 characters
+				<div class="row align-items-center mb-4">
+					<div class="col-md-2">
+						<label for="user-address" class="col-form-label ">Address <i class="fas fa-map-marker-alt"></i></label>
 					</div>
-				</div>
-
-				<div class="form-group">
-					<label class="form-control-label d-block">Gender</label>
-					<div class="custom-control custom-radio">
-						<input class="custom-control-input " type="radio" name="gender" title="You should choose your gender" value="male" id="male" >
-						<label class="custom-control-label" for="male">Male</label>
-					</div>
-					<div class="custom-control custom-radio ">
-						<input class="custom-control-input " type="radio" name="gender" title="You should choose your gender" value="female" id="female" required >
-						<label class="custom-control-label" for="female">Female</label>
+					<div class="col">
+						<input id="user-address" class="form-control shadow-none border-top-0 border-start-0 border-end-0 border-5"
+						type="text" name="address" placeholder="Street..." pattern="^([\u0621-\u064A0-9\-, ]{3,})|([a-zA-Z0-9\-, ]{3,})+$"
+						title="Your address must be in English or Arabic characters only and at least 3 characters" autocomplete="on" required value="">
 						<div class="invalid-feedback">
-							You should choose your gender
+							Your address must be in English or Arabic characters only and at least 3 characters
 						</div>
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label class="form-control-label" for="password">Your Password</label>
-					<input class="form-control " id="password" type="password" name="password" placeholder="at least 8 characters" pattern="^.{8,}$" title="Your password must be 8 caharacters at least" autocomplete="on" required>
-					<div class="invalid-feedback">
-						Your password must be 8 caharacters at least
+				<div class="row align-items-center mb-4">
+					<div class="col-md-2">
+						<label class="form-label ">Gender <i class="fas fa-venus-mars"></i></label>
+					</div>
+					<div class="col">
+						<div class="form-check form-check-inline">
+							<input id="user-gender1" name="gender" class="form-check-input is-valid"
+							type="radio" value="male" title="You should choose your gender" required>
+							<label class="form-check-label" for="user-gender1">Male</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input id="user-gender2" name="gender" class="form-check-input is-invalid"
+							type="radio" value="female" title="You should choose your gender" required>
+							<label class="form-check-label" for="user-gender2">Female</label>
+							<div class="invalid-feedback d-inline">
+								You should choose your gender
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<div class="form-group">
-					<label class="form-control-label" for="confirm-password">Confirm Password</label>
-					<input class="form-control " id="confirm-password" type="password" name="confirm-password" placeholder="the same as password" pattern="^.{8,}$" title="confirm password must match the password" autocomplete="on" required>
-					<div class="invalid-feedback">
-						confirm password must match the password.
+				<div class="row align-items-center mb-4">
+					<div class="col-md-2">
+						<label for="password" class="col-form-label ">Password <i class="fas fa-key"></i></label>
+					</div>
+					<div class="col">
+						<input id="password" class="form-control shadow-none border-top-0 border-start-0 border-end-0 border-5"
+						type="password" name="password" placeholder="***" pattern="^.{8,}$"
+						title="Your password must be 8 caharacters at least" required value="">
+						<div class="invalid-feedback">
+							Your password must be 8 caharacters at least
+						</div>
 					</div>
 				</div>
 
+				<div class="row align-items-center mb-4">
+					<div class="col-md-auto">
+						<label for="password-confirm" class="col-form-label ">Confirm Password <i class="fas fa-lock"></i></label>
+					</div>
+					<div class="col">
+						<input id="password-confirm" class="form-control shadow-none border-top-0 border-start-0 border-end-0 border-5"
+						type="password" name="password_confirmation" placeholder="***" pattern="^.{8,}$"
+						title="confirm password must match the password." required value="">
+						<div class="invalid-feedback">
+							confirm password must match the password
+						</div>
+					</div>
+				</div>
 
-
-
-				<div class="custom-control custom-checkbox">
-					<input class="custom-control-input" type="checkbox" name="agree" title="You should agree all terms" id="agree" value="accepted" required >
-					<label class="custom-control-label" for="agree"><a href="#" > I agree all terms  </a></label>
-					<div class="invalid-feedback">
+				<div class="form-check mb-3">
+			    <input type="checkbox" class="form-check-input" id="user-agree" required>
+			    <a href="#" class="form-check-label" for="user-agree">I agree all terms </a>
+			    <div class="invalid-feedback">
 						You should agree all terms first.
 					</div>
-				</div>
+			  </div>
 
 				<div class="form-group text-end">
 					<input class="btn btn-primary" type="submit" value="Register" title="Can't Register" data-content="you should match all validation first" disabled>
@@ -435,6 +488,10 @@
 		</script>
 		<script src="js/slick.min.js" ></script>
 		<script src="js/script.js" ></script>
+		<!-- by myself from geoname api -->
+		<script src='js/country state city.js'></script>
 
+		<!-- to add flags and styling select -->
+		<script src="js/jquery.dd.js"></script>
 	</body>
 </html>
